@@ -24,6 +24,10 @@ class TodoForm extends Component {
       title: this.state.todoInput,
       done: false
     });
+
+    this.setState({
+      todoInput: ""
+    });
   };
 
   handleChange = e =>
@@ -41,7 +45,7 @@ class TodoForm extends Component {
               onChange={this.handleChange}
               className={styles.todoInput}
               type="text"
-              value={this.state.inputValue}
+              value={this.state.todoInput}
               placeholder="Что сделать?"
             />
           </div>
